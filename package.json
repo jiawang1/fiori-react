@@ -1,0 +1,23 @@
+{
+  "name": "fundamental-react",
+  "private": true,
+  "license": "Apache-2.0",
+  "homepage": "http://sap.github.io/fundamental-react",
+  "repository": {
+    "type": "git",
+    "url": "http://sap.github.io/fundamental-react"
+  },
+  "scripts": {
+    "boot": "npm install lerna && lerna bootstrap --hoist --nohoist=fiori-fundamentals",
+    "deploy": "lerna publish "
+  },
+  "devDependencies": {
+    "lerna": "^3.10.5"
+  },
+  "dependencies": {
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.6.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "prettier": "^1.16.1"
+  }
+}
