@@ -12,22 +12,9 @@ Fundamental-react is a set of [React.js](https://reactjs.org/) components implem
 :open_book:
 </p>
 
-## Current Version
-
-```
-0.0.12-beta
-```
-
 ## Description
 
 Fundamental-react is a set of [React.js](https://reactjs.org/) components implementation of [SAP Fiori Fundamentals library](https://sap.github.io/fundamental/). SAP Fiori Fundamentals library is a Design System and HTML/CSS Component Library used to build modern Product User Experiences with the SAP look and feel. This will allow you to stay/use React for your application and get SAP look and feel.
-
-## Requirements
-
-To download and use Fundamental-react library, you first need to install the node package manager.
-https://www.npmjs.com/get-npm
-
-Some prior knowledge of React is required for using this library.
 
 # Getting started
 
@@ -62,19 +49,21 @@ You can now use the [Component Documentation](https://sap.github.io/fundamental-
     <Icon glyph="cart" size="l" />
     ...
 
-## Available Scripts
+## Contribution to this project
 
-`npm run boot`
-
+Clone this project into your local, then navigate to root directory of this project and execute
+```
+npm run boot
+```
 Install lerna fist and other external dependencies and hoist to parent folder, link internal dependencies.
-
-`npm run deploy`
-
+```
+npm run dev
+```
+Start up the development environment. This command will run playground and watch component libary to enable realtime refreshing in playground when code of component changed. You can check project in https://locahost:3000. 
+```
+npm run deploy
+```
 Deploy packages which chagned to npm repo, bump version number automatically.
-
-## Known Issues
-
-There are no known major issues.
 
 ## How to obtain support
 
@@ -88,8 +77,3 @@ If you want to contribute, please check the [CONTRIBUTING.md](./CONTRIBUTING.md)
 
 Copyright (c) 2018 SAP SE or an SAP affiliate company. All rights reserved.
 This file is licensed under the Apache Software License, v. 2 except as noted otherwise in the [LICENSE file](https://github.com/SAP/fundamental-react/blob/master/LICENSE.txt)
-
-## Similar Projects
-
--   [GitHub repo of Angular implementation of SAP Fiori Fundamentals](https://github.com/SAP/fundamental-ngx)
--   [GitHub repo of Vue implementation of SAP Fiori Fundamentals](https://github.com/SAP/fundamental-vue)
