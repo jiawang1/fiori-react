@@ -33,7 +33,8 @@
     "test:coverage": "jest --coverage",
     "test:dev": "jest",
     "test": "node scripts/test.js",
-    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive"
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "dev:ts":"node scripts/start.js"
   },
   "bugs": {
     "url": "https://github.com/jiawang1/fundamental-react/issues"

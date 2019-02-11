@@ -9,10 +9,11 @@
   },
   "scripts": {
     "boot": "npm install lerna && lerna bootstrap --hoist --nohoist=fiori-fundamentals",
-    "deploy": "lerna publish "
+    "deploy": "lerna publish ",
+    "dev":"lerna run dev:ts --parallel"
   },
   "devDependencies": {
-    "lerna": "^3.10.5"
+    "lerna": "^3.11.0"
   },
   "dependencies": {
     "eslint-config-airbnb": "^17.1.0",
