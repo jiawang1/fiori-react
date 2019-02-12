@@ -116,10 +116,10 @@ export const PopoverComponent = () => {
             control={<Icon glyph="cart" size="xl" />}
             body={
               <Menu>
-                <MenuItem url="/">Option 1</MenuItem>
-                <MenuItem url="/">Option 2</MenuItem>
-                <MenuItem url="/">Option 3</MenuItem>
-                <MenuItem url="/">Option 4</MenuItem>
+                <MenuItem key="1">Option 1</MenuItem>
+                <MenuItem key="2">Option 2</MenuItem>
+                <MenuItem key="3">Option 3</MenuItem>
+                <MenuItem key="4">Option 4</MenuItem>
               </Menu>
             }
           />
@@ -130,10 +130,10 @@ export const PopoverComponent = () => {
             control={<Image size="m" type="circle" photo="https://placeimg.com/400/400/nature" />}
             body={
               <Menu>
-                <MenuItem url="/">Option 1</MenuItem>
-                <MenuItem url="/">Option 2</MenuItem>
-                <MenuItem url="/">Option 3</MenuItem>
-                <MenuItem url="/">Option 4</MenuItem>
+                <MenuItem key="5">Option 1</MenuItem>
+                <MenuItem key="6">Option 2</MenuItem>
+                <MenuItem key="7">Option 3</MenuItem>
+                <MenuItem key="8">Option 4</MenuItem>
               </Menu>
             }
           />
@@ -144,10 +144,10 @@ export const PopoverComponent = () => {
             noArrow
             body={
               <Menu>
-                <MenuItem url="/">Option 1</MenuItem>
-                <MenuItem url="/">Option 2</MenuItem>
-                <MenuItem url="/">Option 3</MenuItem>
-                <MenuItem url="/">Option 4</MenuItem>
+                <MenuItem key="9">Option 1</MenuItem>
+                <MenuItem key="11">Option 2</MenuItem>
+                <MenuItem key="12">Option 3</MenuItem>
+                <MenuItem key="13">Option 4</MenuItem>
               </Menu>
             }
           />
@@ -159,10 +159,10 @@ export const PopoverComponent = () => {
             noArrow
             body={
               <Menu>
-                <MenuItem url="/">Option 1</MenuItem>
-                <MenuItem url="/">Option 2</MenuItem>
-                <MenuItem url="/">Option 3</MenuItem>
-                <MenuItem url="/">Option 4</MenuItem>
+                <MenuItem key="14">Option 1</MenuItem>
+                <MenuItem key="15">Option 2</MenuItem>
+                <MenuItem key="16">Option 3</MenuItem>
+                <MenuItem key="17">Option 4</MenuItem>
               </Menu>
             }
           />
