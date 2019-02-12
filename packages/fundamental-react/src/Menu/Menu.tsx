@@ -74,8 +74,8 @@ export const MenuList = ({ children, className }: IFunctionalProps) => (
     {({ menuState: { selectedKeys } }) => (
       <ul className={`fd-menu__list${className ? ` ${className}` : ''}`}>
         {React.Children.map(children as ReactElement<any>, item => {
-          const itemkey = item.key;
-          const selected = selectedKeys.some(sk => sk === item.key);
+          const itemkey = item.props.itemkey || item.key;
+          const selected = selectedKeys.some(sk => sk === itemkey);
           return React.cloneElement(item, { itemkey, selected });
         })}
       </ul>
