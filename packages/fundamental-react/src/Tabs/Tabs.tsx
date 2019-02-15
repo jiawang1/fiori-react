@@ -46,10 +46,7 @@ export class Tabs extends Component<ITabsProps, any> {
         targetItem = child;
       }
     });
-    const {props:{children : content}} = targetItem! as ReactElement<ITabEntryProps> ;
-    return <div className="fd-tabs__panel" role="tabpanel">
-             { content }
-          </div>
+    return targetItem;
   }
   render() {
     const { className } = this.props;
