@@ -57,13 +57,9 @@ npm run boot
 ```
 Install lerna fist and other external dependencies and hoist to parent folder, link internal dependencies.
 ```
-npm run dev
+npm start
 ```
 Start up the development environment. This command will run playground and watch component libary to enable realtime refreshing in playground when code of component changed. You can check project in https://locahost:3000. 
-```
-npm run deploy
-```
-Deploy packages which chagned to npm repo, bump version number automatically.
 
 ## How to obtain support
 
