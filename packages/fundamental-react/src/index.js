@@ -25,7 +25,7 @@ import { Popover } from './Popover/Popover';
 import { SearchInput } from './SearchInput/SearchInput';
 import { SideNav, SideNavList, SideNavGroup } from './SideNavigation/SideNavigation';
 import { Table } from './Table/Table';
-import { Tabs, TabComponent } from './Tabs/Tabs';
+import { Tabs, TabEntry } from './Tabs';
 import { Token } from './Token/Token';
 import { Tile, TileContent, TileMedia, TileActions, ProductTile, ProductTileMedia, TileGrid, ProductTileContent } from './Tile/Tile';
 import { Toggle } from './Toggle/Toggle';
@@ -98,7 +98,7 @@ export {
   SideNavGroup,
   Table,
   Tabs,
-  TabComponent,
+  TabEntry,
   Token,
   Tile,
   TileContent,
