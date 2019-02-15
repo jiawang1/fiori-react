@@ -26,7 +26,7 @@ import { SearchInput } from './SearchInput/SearchInput';
 import { SideNav, SideNavList, SideNavGroup } from './SideNavigation/SideNavigation';
 import { Table } from './Table/Table';
 import { Tabs, TabEntry } from './Tabs';
-import { Token } from './Token/Token';
+import { Token } from './Token';
 import { Tile, TileContent, TileMedia, TileActions, ProductTile, ProductTileMedia, TileGrid, ProductTileContent } from './Tile/Tile';
 import { Toggle } from './Toggle/Toggle';
 import Tree from './Tree/Tree';
