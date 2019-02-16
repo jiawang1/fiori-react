@@ -3,8 +3,8 @@ import { IFunctionalProps } from '../common/BasicTypes';
 
 
 export interface IButtonProps  extends IFunctionalProps {
-   type: eType,
-   option?: eButtonOption,
+   type: tType,
+   option?: tButtonOption,
    compact ?: boolean,
    glyph ?: string,
    dropdown ?: boolean,
@@ -15,21 +15,8 @@ export interface IButtonProps  extends IFunctionalProps {
    onClick ?: ReactEventHandler
 };
 
-export enum eButtonOption {
-   empty = '',
-   emphasized = 'emphasized',
-   light = 'light',
-   shell = 'shell'
-};
-
-export enum eType {
-  empty = '',
-  standard = 'standard',
-  positive = 'positive',
-  negative= 'negative',
-  medium = 'medium'
-};
-
+type tButtonOption = ''| 'emphasized' | 'light' | 'shell';
+type tType = ''| 'standard' | 'positive' | 'negative' | 'medium';
 
 export const Button: ( props : IButtonProps) => ReactNode = ({ option, type, compact, glyph, dropdown, navbar, selected = false, disabled = false, htmlType, onClick, children, className, ...props }) => (
   <button className={`${option ? `fd-button--${option}` : ' fd-button'}${type ? ` fd-button--${type}` : ''}${dropdown ? ' fd-dropdown__control' : ''}${
