@@ -1,5 +1,5 @@
 import React, { Component, ReactNode,MouseEvent } from 'react';
-import { IProps } from '../common/IProps';
+import { IProps } from '../common/BasicTypes';
 
 
 export interface ITabHeaderItemProps extends IProps<TabHeaderItem> {

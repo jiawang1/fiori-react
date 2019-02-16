@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { IFunctionalProps } from '../common/IProps';
+import { IFunctionalProps } from '../common/BasicTypes';
 
 export interface IInlineHelpProps extends IFunctionalProps{
   text : string,

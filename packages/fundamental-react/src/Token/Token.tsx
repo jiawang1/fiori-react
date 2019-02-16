@@ -1,5 +1,5 @@
 import React, { ReactNode, ReactEventHandler } from 'react';
-import { IFunctionalProps } from '../common/IProps';
+import { IFunctionalProps } from '../common/BasicTypes';
 
 export interface ITokenProps extends IFunctionalProps {
   clickHandler: ReactEventHandler;

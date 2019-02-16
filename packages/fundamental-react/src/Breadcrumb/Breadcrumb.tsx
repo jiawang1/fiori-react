@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import { IProps, IFunctionalProps } from '../common/IProps';
+import { IProps, IFunctionalProps } from '../common/BasicTypes';
 
 interface IRoute {
   name: string;

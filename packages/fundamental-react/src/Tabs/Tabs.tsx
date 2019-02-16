@@ -1,5 +1,5 @@
 import React, { Component,ReactElement,MouseEvent } from 'react';
-import { IProps } from '../common/IProps';
+import { IProps } from '../common/BasicTypes';
 import {ITabEntryProps} from './TabEntry';
 import {TabHeaderItem} from './TabHeaderItem';
 

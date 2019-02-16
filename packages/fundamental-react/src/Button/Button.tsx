@@ -1,5 +1,5 @@
 import React, {ReactEventHandler, ReactNode} from 'react';
-import { IFunctionalProps } from '../common/IProps';
+import { IFunctionalProps } from '../common/BasicTypes';
 
 
 export interface IButtonProps  extends IFunctionalProps {
