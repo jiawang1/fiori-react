@@ -1,5 +1,5 @@
 import React, { Component, ReactElement } from 'react';
-import { IProps } from '../common/IProps';
+import { IProps } from '../common/BasicTypes';
 import {getRandomNumber} from '../common/utils';
 import { KeyCode } from '../common/utils';
 

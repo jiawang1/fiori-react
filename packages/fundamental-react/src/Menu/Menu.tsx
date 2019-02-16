@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { HTMLAttributes, MouseEvent ,ReactElement} from 'react';
-import {IFunctionalProps, IProps} from '../common/IProps';
+import {IFunctionalProps, IProps} from '../common/BasicTypes';
 
 // ------------------------------------------- Menu ------------------------------------------
 export interface IMenuProps extends IProps<Menu> {

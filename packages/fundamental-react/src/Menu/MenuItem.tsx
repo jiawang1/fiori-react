@@ -1,7 +1,7 @@
 import React, { ReactNode, MouseEvent, KeyboardEvent,HTMLAttributes } from 'react';
 import { MenuContext } from './Menu';
 import { KeyCode } from '../common/utils';
-import { IProps } from '../common/IProps';
+import { IProps } from '../common/BasicTypes';
 
 export interface IMenuItemProps extends IProps<MenuItem> {
   selected?: boolean;

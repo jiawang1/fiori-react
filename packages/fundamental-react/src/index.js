@@ -1,6 +1,6 @@
 import { ActionBar, ActionBarBack, ActionBarHeader, ActionBarActions } from './ActionBar/ActionBar';
 import { Alert } from './Alert/Alert';
-import { Badge, Label, Status, Counter } from './Badge/Badge';
+import { Badge, Label, Status, Counter } from './Badge';
 import { Breadcrumb, BreadcrumbItem } from './Breadcrumb/Breadcrumb';
 import { Button, ButtonGroup } from './Button/Button';
 import Calendar from './Calendar/Calendar';
