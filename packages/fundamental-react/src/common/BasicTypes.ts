@@ -13,3 +13,4 @@ export type stateType = ''| 'success'|'warning'|'error';
 export type fullStateType = stateType | 'information';
 export type fullStatusType = stateType | 'available' | 'away' | 'busy' | 'offline';
 export type tBasicSize = ''| 'xs'| 's'| 'l';
+export type tIconType = tBasicSize | 'compact' | 'normal';

@@ -1,18 +1,10 @@
 import React, { ReactEventHandler, ReactNode } from 'react';
-import { IFunctionalProps } from '../common/BasicTypes';
+import { IFunctionalProps,tIconType } from '../common/BasicTypes';
 
 export interface IIconProps extends IFunctionalProps {
   glyph : string;
   clickHandler?: ReactEventHandler;
-  size: eIconSize
-}
-
-export enum eIconSize {
-  extremSmall = 'xs',
-  compact = 'compact',
-  small = 's',
-  normal = 'normal',
-  large = 'l'
+  size: tIconType
 }
 
 export const Icon: (props: IIconProps) => ReactNode = ({ glyph, size, clickHandler, className, ...props }) => (
