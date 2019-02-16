@@ -24,7 +24,7 @@ export const Label = ({ type, children, className, ...props }: ILabelProps) => (
 );
 
 export interface IStatusProps extends IFunctionalProps {
-  type: statusType;
+  type: fullStatusType;
   glyph: string;
 }
 
