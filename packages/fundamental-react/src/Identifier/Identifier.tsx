@@ -1,21 +1,7 @@
 import React, { ReactNode } from 'react';
-import { IFunctionalProps } from '../common/BasicTypes';
+import { IFunctionalProps,tFullSize } from '../common/BasicTypes';
 
-export enum eIdentifierSize {
-  xxs = 'xxs',
-  xs = 'xs',
-  s = 's',
-  m ='m',
-  l = 'l',
-  xl = 'xl',
-  xxl = 'xxl'
-}
-
-export enum eIdentifierModifier {
-  circle = 'circle',
-  transparent='transparent',
-  default = ''
-}
+type tIdentifierModifier = ''| 'circle' | 'transparent';
 
 export enum eIdentifierColor {
   orange = 1,
@@ -31,8 +17,8 @@ export enum eIdentifierColor {
 
 export interface IIdentifierProps extends IFunctionalProps{
   glyph : string,
-  size ?: eIdentifierSize,
-  modifier ?: eIdentifierModifier,
+  size ?: tFullSize,
+  modifier ?: tIdentifierModifier,
   color ?:eIdentifierColor,
   label ?: string,
   backgroundImageUrl ?: string
