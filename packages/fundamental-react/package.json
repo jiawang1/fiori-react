@@ -26,9 +26,10 @@
     "test": "node scripts/test.js",
     "dev": "rm -rf es dist && NODE_ENV=production babel --watch src --out-dir es --ignore __tests__,src/**/*.spec.js,src/**/*.test.js,__snapshots__",
     "dev:ts": "tsc --watch",
-    "build:ts":"tsc"
+    "build:ts": "tsc"
   },
   "dependencies": {
+    "classnames": "^2.2.6",
     "react-router-dom": "^4.3.1",
     "react-syntax-highlighter": "^10.1.2"
   },

@@ -3,16 +3,10 @@ import { IFunctionalProps } from '../common/BasicTypes';
 
 export interface IInlineHelpProps extends IFunctionalProps{
   text : string,
-  placement:eInlineHelpPosition
+  placement:TInlineHelpPosition
 }
 
-export enum eInlineHelpPosition{
-  left = 'left',
-  right ='right',
-  bottomRight = 'bottom-right',
-  bottomLeft = 'bottom-left',
-  bottomCenter = 'bottom-center'
-}
+export type TInlineHelpPosition = 'left' | 'right' | 'bottom-right' | 'bottom-left' | 'bottom-center';
 
 export const InlineHelp : (props :IInlineHelpProps )=> ReactNode = ({ text, placement, className, ...props }) => (
   <span className="fd-inline-help">
