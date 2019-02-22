@@ -355,15 +355,10 @@ export class Playground extends Component {
             <FormLabel labelText="Input with text action" />
             <FormItem>
               <InputGroup
-                inputType={this.state.childs.children[1].props.children.props.inputType}
-                addonPos={this.retrieveValue('addonPos', this.state.childs.children[1].props.children.props.addonPos, this.state.currentValues)}
-                inputValue={this.retrieveValue('inputValue', this.state.childs.children[1].props.children.props.inputValue, this.state.currentValues)}
-                actions
-              >
-                <Button option="light" glyph={this.retrieveValue('glyph', this.state.childs.children[1].props.children.props.children.props.glyph, this.state.currentValues)}>
-                  {this.retrieveValue('children', this.state.childs.children[1].props.children.props.children.props.children, this.state.currentValues)}
-                </Button>
-              </InputGroup>
+                type={this.state.childs.children[1].props.children.props.type}
+                afterAddon={this.retrieveValue('afterAddon', this.state.childs.children[1].props.children.props.afterAddon, this.state.currentValues)}
+                value={this.retrieveValue('value', this.state.childs.children[1].props.children.props.value, this.state.currentValues)}
+              />
             </FormItem>
           </FormGroup>
         );
