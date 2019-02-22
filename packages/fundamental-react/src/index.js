@@ -12,7 +12,7 @@ import { Icon } from './Icon/Icon';
 import { Identifier } from './Identifier/Identifier';
 import { Image } from './Image/Image';
 import { InlineHelp } from './InlineHelp/InlineHelp';
-import { InputGroup, FormGroup } from './InputGroup/InputGroup';
+import { InputGroup, FormGroup } from './InputGroup';
 import { ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox } from './ListGroup/ListGroup';
 import { LocalizationEditor } from './LocalizationEditor/LocalizationEditor';
 import { MegaMenu, MegaMenuList, MegaMenuGroup } from './MegaMenu/MegaMenu';
