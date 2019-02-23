@@ -7,6 +7,7 @@ export const FormGroup = (props:IFunctionalProps) => {
   return <div className="fd-form__group">{children}</div>;
 };
 
+export type TInputStatus =  'valid' | 'invalid' | 'warning';
 export type TInputType = 'text' | 'number' | 'search';
 export interface IInputGroupProps extends IFunctionalProps {
   type: TInputType;
@@ -21,11 +22,12 @@ export interface IInputGroupProps extends IFunctionalProps {
   beforeAddon ?: string | ReactNode;
   afterAddon ?: string | ReactNode;
   disabled ?: boolean;
-  clearAble?: boolean
+  clearAble?: boolean;
+  status ?: TInputStatus
 }
 
 export const InputGroup = (props:IInputGroupProps) =>{
-const {beforeAddon, afterAddon, compact, prefixIcon, suffixIcon, ...rest } = props;
+const {beforeAddon, afterAddon, compact, prefixIcon, suffixIcon, status, ...rest } = props;
   const frameClass: string = classNames({
     'fd-input-group': true,
      'fd-input-group--after':!!afterAddon || !! suffixIcon,
@@ -34,7 +36,8 @@ const {beforeAddon, afterAddon, compact, prefixIcon, suffixIcon, ...rest } = pro
   })
 
   const inputClass:string = classNames({
-    'fd-input fd-input--compact': compact
+    'fd-input fd-input--compact': compact,
+    [`is-${status}`]: status !== undefined
   });
 
   const renderAddon = (child: ReactElement<any>, position:string) =>{
