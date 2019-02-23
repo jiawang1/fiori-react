@@ -1,10 +1,10 @@
 import React, { ChangeEvent,HTMLAttributes } from 'react';
-import {IProps,tBasicSize} from '../common/BasicTypes';
+import {IProps,tToggleSize} from '../common/BasicTypes';
 
 export interface IToggleProps extends IProps<Toggle>{
   disabled : boolean,
   defaultChecked : boolean,
-  size :tBasicSize
+  size :tToggleSize
   onChange ?: ( checked : boolean, e : ChangeEvent<HTMLInputElement> ) => void
 }
 
