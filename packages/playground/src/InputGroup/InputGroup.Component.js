@@ -256,6 +256,33 @@ Compact mode:
       </DocsTile>
       <DocsText>{inputWithActionsCode}</DocsText>
       <Separator />
+      <h2>Input with status</h2>
+      <Description>The Input with status.</Description>
+      <DocsTile>
+        <FormGroup>
+          <FormLabel labelText="Input with valid status" />
+          <FormItem>
+            <InputGroup type="text" value="1234567890" status="valid" />
+          </FormItem>
+        </FormGroup>
+        <br />
+        <FormGroup>
+          <FormLabel labelText="Input with invalid status" />
+          <FormItem>
+            <InputGroup type="text" placeholder="invalid" status="invalid" />
+          </FormItem>
+        </FormGroup>
+        <br />
+        <FormGroup>
+          <FormLabel labelText="Input with warning status" />
+          <FormItem>
+            <InputGroup type="text" value="warning" status="warning" />
+          </FormItem>
+        </FormGroup>
+        <br />
+      </DocsTile>
+      <DocsText>{inputWithActionsCode}</DocsText>
+      <Separator />
       <h2>Playground</h2>
       <Playground
         component="inputgroup"
