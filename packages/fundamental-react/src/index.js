@@ -33,6 +33,7 @@ import Tree from './Tree/Tree';
 import { Time } from './Time/Time';
 import { TimePicker } from './TimePicker/TimePicker';
 import { Shellbar } from './Shellbar/Shellbar';
+import { Radio } from './Forms';
 
 export {
   ActionBar,
@@ -112,5 +113,6 @@ export {
   ProductTileContent,
   Toggle,
   Tree,
-  Shellbar
+  Shellbar,
+  Radio
 };
