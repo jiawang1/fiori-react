@@ -89,7 +89,8 @@ export const AlertComponent = () => {
       </Description>
       <DocsTile>
         <Alert type="error" dismissable>
-          <Icon glyph="message-error" /> Error Message.{' '}
+          <Icon glyph="message-error" />
+          Error Message.
           <a href="#" className="fd-link">
             Learn More
           </a>
@@ -102,7 +103,8 @@ export const AlertComponent = () => {
       <h2>Success Alert</h2>
       <DocsTile>
         <Alert type="success" dismissable>
-          <Icon glyph="message-success" /> Message Success.{' '}
+          <Icon glyph="message-success" />
+          Message Success.
           <a href="#" className="fd-link">
             Learn More
           </a>
@@ -115,7 +117,8 @@ export const AlertComponent = () => {
       <h2>Information Alert</h2>
       <DocsTile>
         <Alert type="information" dismissable>
-          <Icon glyph="message-information" /> Information Message.{' '}
+          <Icon glyph="message-information" />
+          Information Message.
           <a href="#" className="fd-link">
             Learn More
           </a>
