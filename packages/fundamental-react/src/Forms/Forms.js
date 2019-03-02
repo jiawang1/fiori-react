@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 // ------------------------------------------------- Form Set -----------------------------------------------
@@ -88,67 +88,3 @@ FormSelect.propTypes = {
 };
 
 // ------------------------------------------------- Form Radio ----------------------------------------------
-export class FormRadio extends Component {
-  constructor(props) {
-    super(props);
-    this.handleChange = this.handleChange.bind(this);
-    this.state = {
-      selectedItem: this.props.defaultChecked
-    };
-  }
-
-  handleChange(e) {
-    this.setState({
-      selectedItem: e.currentTarget.value
-    });
-  }
-
-  render() {
-    const { inputs, disabled, isInline } = this.props;
-    let result;
-
-    if (isInline) {
-      result = inputs.map(inputItem => (
-        <div className="fd-form__item fd-form__item--inline fd-form__item--check" key={inputItem.id}>
-          <label className="fd-form__label" htmlFor={inputItem.id}>
-            <input
-              className="fd-form__control"
-              type="radio"
-              id={inputItem.id}
-              name={inputItem.name}
-              value={inputItem.value}
-              disabled={disabled ? true : ''}
-              onChange={this.handleChange}
-              checked={this.state.selectedItem === inputItem.id}
-            />
-            {inputItem.label}
-          </label>
-        </div>
-      ));
-    } else {
-      result = inputs.map(inputItem => (
-        <div className="fd-form__item fd-form__item--check" key={inputItem.id}>
-          <input
-            className="fd-form__control"
-            type="radio"
-            id={inputItem.id}
-            name={inputItem.name}
-            value={inputItem.value}
-            disabled={disabled ? true : ''}
-            onChange={this.handleChange}
-            checked={this.state.selectedItem === inputItem.id}
-          />
-          <label className="fd-form__label" htmlFor={inputItem.id}>
-            {inputItem.label}
-          </label>
-        </div>
-      ));
-    }
-    return <div>{result}</div>;
-  }
-}
-FormRadio.propTypes = {
-  defaultChecked: PropTypes.string,
-  disabled: PropTypes.bool,
-  isInline: PropTypes.bool
-};
