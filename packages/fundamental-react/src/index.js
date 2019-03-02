@@ -7,7 +7,7 @@ import Calendar from './Calendar/Calendar';
 import ComboboxInput from './ComboboxInput/ComboboxInput';
 import DatePicker from './DatePicker/DatePicker';
 import { Dropdown } from './Dropdown/Dropdown';
-import { FormSet, FormItem, FormLabel, FormInput, FormRadio, FormTextarea, FormMessage, FormSelect, FormFieldset, FormLegend } from './Forms/Forms';
+import { FormSet, FormItem, FormLabel, FormInput, FormTextarea, FormMessage, FormSelect, FormFieldset, FormLegend } from './Forms/Forms';
 import { Icon } from './Icon/Icon';
 import { Identifier } from './Identifier/Identifier';
 import { Image } from './Image/Image';
@@ -33,7 +33,7 @@ import Tree from './Tree/Tree';
 import { Time } from './Time/Time';
 import { TimePicker } from './TimePicker/TimePicker';
 import { Shellbar } from './Shellbar/Shellbar';
-import { Radio } from './Forms';
+import { Radio, CheckBox, CheckGroup } from './Forms';
 
 export {
   ActionBar,
@@ -57,7 +57,6 @@ export {
   FormItem,
   FormLabel,
   FormInput,
-  FormRadio,
   FormTextarea,
   FormMessage,
   FormSelect,
@@ -114,5 +113,7 @@ export {
   Toggle,
   Tree,
   Shellbar,
-  Radio
+  Radio,
+  CheckBox,
+  CheckGroup
 };

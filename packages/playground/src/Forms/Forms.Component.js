@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormSet, FormItem, FormLabel, FormInput, FormRadio, FormTextarea, FormMessage, FormSelect, FormFieldset, FormLegend, Radio } from '@jay.wang/fundamental-react';
+import { FormSet, FormItem, FormLabel, FormInput, FormTextarea, FormMessage, FormSelect, FormFieldset, FormLegend, Radio, CheckBox, CheckGroup } from '@jay.wang/fundamental-react';
 import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../documentation';
 
 export const FormsComponent = () => {
@@ -523,40 +523,23 @@ export const FormsComponent = () => {
         <FormFieldset>
           <FormLegend>Checkboxes</FormLegend>
           <FormItem isCheck>
-            <FormInput type="checkbox" id="checkbox-1" name="checkbox-name-1" value="" />
-            <FormLabel htmlFor="checkbox-1">Option One</FormLabel>
+            <CheckBox>Checkbox one </CheckBox>
           </FormItem>
           <FormItem isCheck>
-            <FormInput type="checkbox" id="checkbox-2" name="checkbox-name-2" value="" />
-            <FormLabel htmlFor="checkbox-2">Option Two</FormLabel>
+            <CheckBox disabled>Checkbox two </CheckBox>
           </FormItem>
           <FormItem isCheck>
-            <FormInput type="checkbox" id="checkbox-3" name="checkbox-name-3" value="" />
-            <FormLabel htmlFor="checkbox-3">Option Three</FormLabel>
+            <CheckBox defaultChecked value="test" onChange={e => console.log(e.target.value)}>
+              Checkbox three
+            </CheckBox>
           </FormItem>
         </FormFieldset>
 
-        <FormFieldset>
-          <FormLegend>Inline Checkbox buttons</FormLegend>
-          <FormItem isCheck isInline>
-            <FormLabel htmlFor="checkbox-4">
-              <FormInput type="checkbox" id="checkbox-4" name="checkbox-name-4" value="" />
-              Option One
-            </FormLabel>
-          </FormItem>
-          <FormItem isCheck isInline>
-            <FormLabel htmlFor="checkbox-5">
-              <FormInput type="checkbox" id="checkbox-5" name="checkbox-name-5" value="" />
-              Option Two
-            </FormLabel>
-          </FormItem>
-          <FormItem isCheck isInline>
-            <FormLabel htmlFor="checkbox-6">
-              <FormInput type="checkbox" id="checkbox-6" name="checkbox-name-6" value="" />
-              Option Three
-            </FormLabel>
-          </FormItem>
-        </FormFieldset>
+        <CheckGroup direction="horizental" name="Inline Checkbox buttons">
+          <CheckBox onChange={e=> console.log(e.target.value)}>Option one </CheckBox>
+          <CheckBox>Option two </CheckBox>
+          <CheckBox>Option three </CheckBox>
+        </CheckGroup>
       </DocsTile>
       <DocsText>{inputsCheckboxCode}</DocsText>
 
