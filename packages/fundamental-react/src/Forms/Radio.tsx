@@ -1,11 +1,9 @@
 import classNames from 'classnames';
 import React, { ChangeEvent, Component, DetailedHTMLProps,InputHTMLAttributes,FieldsetHTMLAttributes } from 'react';
-import { IFunctionalProps, IProps } from '../common/BasicTypes';
-
-export type TRadioGroupDirection = 'horizental' | 'vertical';
+import { IFunctionalProps, IProps , TDirection } from '../common/BasicTypes';
 
 export interface IRadioGroupProps extends IProps<RadioGroup> {
-  direction: TRadioGroupDirection;
+  direction: TDirection;
   title?: string;
   name: string;
   disabled: boolean;
@@ -14,7 +12,7 @@ export interface IRadioGroupProps extends IProps<RadioGroup> {
 }
 
 interface IRadioContextValue {
-  direction: TRadioGroupDirection;
+  direction: TDirection;
   name : string;
   onChange ?: (e: ChangeEvent<HTMLInputElement>) => void;
   selectedValue ?: string;
