@@ -9,6 +9,6 @@ export interface IImageProps extends IFunctionalProps {
 
 export type tImageType = 'circle' | '';
 
-export const Image: (props: IImageProps) => ReactNode = ({ size, type, photo, className, ...props }) => (
+export const Image: (props: IImageProps) => ReactNode = ({ size = '', type, photo, className, ...props }) => (
   <span className={`${`fd-image--${size}`}${type ? ` fd-image--${type}` : ''}${className ? ` ${className}` : ''}`} style={{ backgroundImage: `url(${photo})` }} {...props} />
 );

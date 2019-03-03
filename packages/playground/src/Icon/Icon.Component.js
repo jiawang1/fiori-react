@@ -1,15 +1,6 @@
 import React from 'react';
 import { Icon } from '@jay.wang/fundamental-react';
-import {
-  DocsTile,
-  DocsText,
-  Separator,
-  Header,
-  Description,
-  Import,
-  Properties,
-  Playground
-} from '../documentation';
+import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '../documentation';
 
 export const IconComponent = () => {
   const iconsCode = `<Icon glyph="cart" size="s" />
@@ -17,6 +8,10 @@ export const IconComponent = () => {
 <Icon glyph="cart" size="m" />
 <Icon glyph="cart" size="l" />
 <Icon glyph="cart" size="xl" />`;
+
+  const animationCode = `  <Icon glyph="co" size="m" />
+  <Icon glyph="co" size="m" animation="spin" />
+  <Icon glyph="co" size="m" animation="pulse" />`;
 
   let listOfIcons = [
     'accelerated',
@@ -644,66 +639,75 @@ export const IconComponent = () => {
 
   let icons = listOfIcons.map((icon, index) => {
     return (
-        <div key={index} className='demo-icon-wrapper'>
-            <Icon glyph={icon} size='xl' />
-            <h5>sap-icon--{icon}</h5>
-        </div>
+      <div key={index} className="demo-icon-wrapper">
+        <Icon glyph={icon} size="xl" />
+        <h5>sap-icon--{icon}</h5>
+      </div>
     );
   });
 
   return (
-      <div>
-          <Header>Icon</Header>
-          <Description>
-        Icons are used throughout the UI to save space, allow for visual clarity
-        and focus, and for fun. Icons can be used adaptively if desired, but at
-        this point they are used more as visual elements within other
-        components.
-          </Description>
-          <Import module='Icon' path='/fundamental-react/src/' />
+    <div>
+      <Header>Icon</Header>
+      <Description>
+        Icons are used throughout the UI to save space, allow for visual clarity and focus, and for fun. Icons can be used adaptively if desired, but at this point they are used
+        more as visual elements within other components.
+      </Description>
+      <Import module="Icon" path="/fundamental-react/src/" />
 
-          <Separator />
+      <Separator />
 
-          <Properties
-              type='Inputs'
-              properties={[
+      <Properties
+        type="Inputs"
+        properties={[
           { name: 'glyph', description: 'string (required) - Icon name.' },
           {
             name: 'size',
-            description:
-              'string - Size of the icon. Options include \'xs\', \'s\', \'compact\', and \'l\'. If no size is provided, default (normal) will be used.'
+            description: "string - Size of the icon. Options include 'xs', 's', 'compact', and 'l'. If no size is provided, default (normal) will be used."
           }
-        ]} />
+        ]}
+      />
 
-          <Separator />
+      <Separator />
 
-          <DocsTile centered>
-              <div className='fd-doc__margin--icon'>
-                  <Icon glyph='cart' size='s' />
-                  <Icon glyph='cart' />
-                  <Icon glyph='cart' size='m' />
-                  <Icon glyph='cart' size='l' />
-                  <Icon glyph='cart' size='xl' />
-              </div>
-          </DocsTile>
-          <DocsText>{iconsCode}</DocsText>
+      <DocsTile centered>
+        <div className="fd-doc__margin--icon">
+          <Icon glyph="cart" size="s" />
+          <Icon glyph="cart" />
+          <Icon glyph="cart" size="m" />
+          <Icon glyph="cart" size="l" />
+          <Icon glyph="cart" size="xl" />
+        </div>
+      </DocsTile>
+      <DocsText>{iconsCode}</DocsText>
 
-          <Separator />
+      <Separator />
 
-          <h2>Available Icons</h2>
+      <DocsTile centered>
+        <div className="fd-doc__margin--icon">
+          <Icon glyph="co" size="m" />
+          <Icon glyph="co" size="m" animation="spin" />
+          <Icon glyph="co" size="m" animation="pulse" />
+        </div>
+      </DocsTile>
+      <DocsText>{animationCode}</DocsText>
 
-          <DocsTile>{icons}</DocsTile>
+      <Separator />
 
-          <Separator />
+      <h2>Available Icons</h2>
 
-          <h2>Playground Icon</h2>
-          <Playground
-              component='icon'
-              schema={[
+      <DocsTile>{icons}</DocsTile>
+
+      <Separator />
+
+      <h2>Playground Icon</h2>
+      <Playground
+        component="icon"
+        schema={[
           {
             attribute: 'glyph',
             typeOfAttribute: 'string',
-            'enum': [
+            enum: [
               '',
               'accelerated',
               'accept',
@@ -1331,11 +1335,12 @@ export const IconComponent = () => {
           {
             attribute: 'size',
             typeOfAttribute: 'string',
-            'enum': ['s', '', 'm', 'l', 'xl']
+            enum: ['s', '', 'm', 'l', 'xl']
           }
-        ]}>
-              <Icon glyph='cart' size='s' />
-          </Playground>
-      </div>
+        ]}
+      >
+        <Icon glyph="cart" size="s" />
+      </Playground>
+    </div>
   );
 };
