@@ -1,0 +1,1 @@
+export { Shellbar } from './Shellbar';

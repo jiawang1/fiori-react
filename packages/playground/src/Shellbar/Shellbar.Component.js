@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-
-import { Shellbar, Menu, MenuItem } from '@jay.wang/fundamental-react';
+import { Shellbar1, Menu, MenuItem, Shellbar, Icon, Image } from '@jay.wang/fundamental-react';
 import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../documentation';
 var images = require.context('../../assets', true);
 
@@ -446,7 +445,7 @@ productSwitcher = {
           This example shows the minimum shellbar for a single application product with only user settings. If no user thumbnail is available then display initials.
         </Description>
         <DocsTile>
-          <Shellbar
+          <Shellbar1
             logo={<img src="//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png" alt="SAP" />}
             productTitle="Corporate Portal"
             profile={this.profile1}
@@ -460,7 +459,7 @@ productSwitcher = {
         <h2>Product Menu and Search</h2>
         <Description>This example includes the product menu for navigating to applications within the product and shows a search box.</Description>
         <DocsTile>
-          <Shellbar
+          <Shellbar1
             logoSAP
             productTitle="Corporate Portal"
             productMenu={this.productMenu}
@@ -480,7 +479,7 @@ productSwitcher = {
           When a product has multiple links, the product links should collapse into an overflow menu on mobile screens. All actions, except for the user menu, should be collapsed.
         </Description>
         <DocsTile>
-          <Shellbar
+          <Shellbar1
             logoSAP
             productTitle="Corporate Portal"
             productMenu={this.productMenu}
@@ -493,6 +492,58 @@ productSwitcher = {
             profileMenu={this.profileMenu}
             productSwitcher={this.productSwitcher}
             productSwitcherList={this.productSwitcherList}
+          />
+        </DocsTile>
+        <DocsText>{this.shellbarExampleCode}</DocsText>
+
+        <DocsText>{this.menuAndSearchShellbarExampleCode}</DocsText>
+
+        <Separator />
+
+        <h2>New Shell</h2>
+        <Description>
+          When a product has multiple links, the product links should collapse into an overflow menu on mobile screens. All actions, except for the user menu, should be collapsed.
+        </Description>
+        <DocsTile>
+          <Shellbar
+            companyLogoComponent={
+              <Shellbar.CompanyLogo url="#">
+                <Icon glyph="cart" size="xl" />
+              </Shellbar.CompanyLogo>
+            }
+          />
+        </DocsTile>
+        <DocsText>{this.shellbarExampleCode}</DocsText>
+
+        <Separator />
+
+        <h2>New Shell</h2>
+        <Description>
+          When a product has multiple links, the product links should collapse into an overflow menu on mobile screens. All actions, except for the user menu, should be collapsed.
+        </Description>
+        <DocsTile>
+          <Shellbar
+            companyLogoComponent={
+              <Shellbar.CompanyLogo url="#">
+                <Image photo="https://placeimg.com/400/400/nature" />
+              </Shellbar.CompanyLogo>
+            }
+          />
+        </DocsTile>
+        <DocsText>{this.shellbarExampleCode}</DocsText>
+        <Separator />
+
+        <h2>New Shell</h2>
+        <Description>
+          When a product has multiple links, the product links should collapse into an overflow menu on mobile screens. All actions, except for the user menu, should be collapsed.
+        </Description>
+        <DocsTile>
+          <Shellbar
+            companyLogoComponent={
+              <Shellbar.CompanyLogo url="#">
+                <img src="//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png" alt="SAP" />
+              </Shellbar.CompanyLogo>
+            }
           />
         </DocsTile>
         <DocsText>{this.shellbarExampleCode}</DocsText>
