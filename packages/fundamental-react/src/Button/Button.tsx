@@ -40,7 +40,7 @@ export const Button: FunctionComponent<IButtonProps> = ({
     [`sap-icon--${glyph}`]: typeof glyph === 'string',
     'is-selected': selected,
     'is-disabled': disabled,
-    className
+    [`${className}`] : typeof className === 'string'
   });
   return (
     <button className={classes} {...props} disabled={disabled} type={htmlType} onClick={onClick}>
