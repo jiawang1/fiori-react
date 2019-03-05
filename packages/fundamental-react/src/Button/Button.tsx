@@ -1,40 +1,55 @@
-import React, {ReactEventHandler, ReactNode} from 'react';
-import { IFunctionalProps } from '../common/BasicTypes';
+import React, { ReactEventHandler, FunctionComponent } from 'react';
+import classNames from 'classnames';
+import { IFunctionalProps, TButtonOption, TButtonType } from '../common/BasicTypes';
 
+export interface IButtonProps extends IFunctionalProps {
+  type?: TButtonType;
+  option?: TButtonOption;
+  isCompact?: boolean;
+  glyph?: string;
+  isDropdown?: boolean;
+  isNavbar?: boolean;
+  selected?: boolean;
+  disabled?: boolean;
+  htmlType?: string;
+  onClick?: ReactEventHandler;
+}
 
-export interface IButtonProps  extends IFunctionalProps {
-   type: tType,
-   option?: tButtonOption,
-   compact ?: boolean,
-   glyph ?: string,
-   dropdown ?: boolean,
-   navbar ?:boolean,
-   selected ?: boolean,
-   disabled: boolean,
-   htmlType: string,
-   onClick ?: ReactEventHandler
+export const Button: FunctionComponent<IButtonProps> = ({
+  option,
+  type = 'standard',
+  isCompact,
+  glyph,
+  isDropdown,
+  isNavbar,
+  selected = false,
+  disabled = false,
+  htmlType = 'button',
+  onClick,
+  children,
+  className,
+  ...props
+}) => {
+  const classes = classNames({
+    [`fd-button--${option}`]: typeof option === 'string',
+    'fd-button': !option,
+    [`fd-button--${type}`]: typeof type === 'string',
+    'fd-dropdown__control': isDropdown,
+    'fd-button--compact': isCompact,
+    'fd-global-nav__btn': isNavbar,
+    [`sap-icon--${glyph}`]: typeof glyph === 'string',
+    'is-selected': selected,
+    'is-disabled': disabled,
+    className
+  });
+  return (
+    <button className={classes} {...props} disabled={disabled} type={htmlType} onClick={onClick}>
+      {children}
+    </button>
+  );
 };
 
-type tButtonOption = ''| 'emphasized' | 'light' | 'shell';
-type tType = ''| 'standard' | 'positive' | 'negative' | 'medium';
-
-export const Button: ( props : IButtonProps) => ReactNode = ({ option, type, compact, glyph, dropdown, navbar, selected = false, disabled = false, htmlType, onClick, children, className, ...props }) => (
-  <button className={`${option ? `fd-button--${option}` : ' fd-button'}${type ? ` fd-button--${type}` : ''}${dropdown ? ' fd-dropdown__control' : ''}${
-      compact ? ' fd-button--compact' : ''
-    }${glyph ? ` sap-icon--${glyph}` : ''}${navbar ? ' fd-global-nav__btn' : ''}${selected ? ' is-selected' : ''}${disabled ? ' is-disabled' : ''}${
-      className ? ` ${className}` : ''
-    }`}
-    {...props}
-    disabled={disabled}
-    type={htmlType}
-    onClick={onClick}
-  >
-    {children}
-  </button>
-);
-
-
-export const ButtonGroup :  ( props : IFunctionalProps) => ReactNode = props => {
+export const ButtonGroup: FunctionComponent<IFunctionalProps> = props => {
   const { children } = props;
   return (
     <div className="fd-button-group" role="group" aria-label="Group label">
