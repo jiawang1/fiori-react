@@ -18,3 +18,5 @@ export type tToggleSize = tBasicSize | 'xs';
 export type tIconType = tBasicSize | 'compact' | 'normal';
 export type tFullSize = tBasicSize | 'xxs' | 'xs' | 'xl' | 'xxl';
 export type TDirection = 'horizental' | 'vertical';
+export type TButtonOption = '' | 'emphasized' | 'light' | 'shell';
+export type TButtonType = '' | 'standard' | 'positive' | 'negative' | 'medium'
