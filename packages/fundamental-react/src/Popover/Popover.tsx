@@ -10,7 +10,6 @@ export interface IPopoverProps extends IProps<Popover> {
   noArrow?: boolean;
   alignment?: PopoverAlignment;
   control?: ReactElement<any>;
-  body: ReactElement<any>;
   id ?: string
 }
 
@@ -63,9 +62,9 @@ export class Popover extends Component<IPopoverProps, any> {
   };
 
   render() {
-    const { id = String(getRandomNumber()), alignment, noArrow, control, body, className, ...rest } = this.props;
+    const { id = String(getRandomNumber()), alignment, noArrow, control, className, children, ...rest } = this.props;
     return (
-      <div ref={this.node} className={`fd-popover${alignment ? ` fd-popover--${alignment}` : ''}${className ? ` ${className}` : ''}`} 
+      <div ref={this.node} className={`fd-popover${alignment ? ` fd-popover--${alignment}` : ''}${className ? ` ${className}` : ''}`}
         {...rest}
       >
         <div className="fd-popover__control" aria-expanded={this.state.isExpanded} onClick={this.triggerBody} aria-controls={id}>
@@ -76,7 +75,7 @@ export class Popover extends Component<IPopoverProps, any> {
           aria-hidden={!this.state.isExpanded}
           id={id}
         >
-          {body}
+          {children}
         </div>
       </div>
     );
