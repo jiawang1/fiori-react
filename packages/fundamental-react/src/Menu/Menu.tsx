@@ -1,11 +1,10 @@
-import PropTypes from 'prop-types';
-import React, { HTMLAttributes, MouseEvent ,ReactElement} from 'react';
+import React, { HTMLAttributes, MouseEvent ,ReactElement, FunctionComponent} from 'react';
 import {IFunctionalProps, IProps} from '../common/BasicTypes';
 
 // ------------------------------------------- Menu ------------------------------------------
 export interface IMenuProps extends IProps<Menu> {
-  className?: string;
   defaultSelectedKeys: Array<number | string>;
+  showSelection ?: boolean;
   onClick: (key: string | number, originSelectedKeys: Array<string | number>, e: MouseEvent | KeyboardEvent) => void;
 }
 
@@ -19,10 +18,11 @@ type MenuClickHandler = (key: string | number, e: MouseEvent) => void;
 
 interface IMenuContext {
   menuState: IMenuState;
+  showSelection : boolean;
   onClick: MenuClickHandler;
 }
 
-export const MenuContext = React.createContext<IMenuContext>({ menuState: { selectedKeys: [] }, onClick: noop });
+export const MenuContext = React.createContext<IMenuContext>({ menuState: { selectedKeys: [] }, onClick: noop, showSelection:true });
 
 export class Menu extends React.Component<IMenuProps> {
   state: IMenuState = {
@@ -56,9 +56,9 @@ export class Menu extends React.Component<IMenuProps> {
   };
 
   render() {
-    const { children, className, onClick, defaultSelectedKeys, ...restProps  } = this.props;
+    const { children, className, onClick, defaultSelectedKeys, showSelection = true, ...restProps  } = this.props;
     return (
-      <MenuContext.Provider value={{ menuState: this.state, onClick: this.handleClick }}>
+      <MenuContext.Provider value={{ menuState: this.state, onClick: this.handleClick ,showSelection }}>
         <nav className={className} {...restProps as HTMLAttributes<HTMLElement>}>
           <MenuList>{children}</MenuList>
         </nav>
@@ -69,7 +69,7 @@ export class Menu extends React.Component<IMenuProps> {
 
 // ---------------------------------------- Menu List ----------------------------------------
 
-export const MenuList = ({ children, className }: IFunctionalProps) => (
+export const MenuList :FunctionComponent<IFunctionalProps>  = ({ children, className }: IFunctionalProps) => (
   <MenuContext.Consumer>
     {({ menuState: { selectedKeys } }) => (
       <ul className={`fd-menu__list${className ? ` ${className}` : ''}`}>
@@ -87,14 +87,10 @@ interface IMenuGroupProps extends IFunctionalProps {
   title: string;
 }
 
-export const MenuGroup = ({ title, children, className, ...props }: IMenuGroupProps) => (
+export const MenuGroup : FunctionComponent<IMenuGroupProps> = ({ title, children, className, ...props } :IMenuGroupProps) => (
   <div className={`fd-menu__group${className ? ` ${className}` : ''}`} {...props}>
     <div className="fd-menu__title">{title}</div>
     <MenuList>{children}</MenuList>
   </div>
 );
 
-MenuGroup.propTypes = {
-  className: PropTypes.string,
-  title: PropTypes.string
-};
