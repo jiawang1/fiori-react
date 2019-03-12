@@ -2,7 +2,7 @@ import { ActionBar, ActionBarBack, ActionBarHeader, ActionBarActions } from './A
 import { Alert } from './Alert/Alert';
 import { Badge, Label, Status, Counter } from './Badge';
 import { Breadcrumb, BreadcrumbItem } from './Breadcrumb/Breadcrumb';
-import { Button, ButtonGroup } from './Button/Button';
+import Button, { ButtonGroup } from './Button';
 import Calendar from './Calendar/Calendar';
 import ComboboxInput from './ComboboxInput/ComboboxInput';
 import DatePicker from './DatePicker/DatePicker';
@@ -21,7 +21,7 @@ import { Modal } from './Modal/Modal';
 import { MultiInput } from './MultiInput/MultiInput';
 import { Pagination } from './Pagination/Pagination';
 import { Panel, PanelGrid, PanelBody, PanelHeader, PanelHead, PanelActions, PanelFilters, PanelContent, PanelFooter } from './Panel/Panel';
-import { Popover } from './Popover/Popover';
+import Popover from './Popover';
 import { SearchInput } from './SearchInput/SearchInput';
 import { SideNav, SideNavList, SideNavGroup } from './SideNavigation/SideNavigation';
 import { Table } from './Table/Table';

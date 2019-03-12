@@ -27,11 +27,11 @@ export default class MenuItem extends React.Component<IMenuItemProps> {
 
   render() {
     const { selected, separator, children, className, itemkey, ...rest } = this.props;
-
+    const {showSelection} = this.context;
     return (
       <React.Fragment>
         <li role="menuitem" className={className} {...rest as HTMLAttributes<HTMLElement>} onClick={this.onClick} onKeyDown={this.onKeyDown} tabIndex={0}>
-          {<div className="fd-menu__addon-before">{selected ? <span className="sap-icon--accept" /> : null}</div>}
+          {<div className="fd-menu__addon-before">{ showSelection && selected ? <span className="sap-icon--accept" /> : null}</div>}
           {<span className="fd-menu__item">{children}</span>}
         </li>
         {separator && <hr />}

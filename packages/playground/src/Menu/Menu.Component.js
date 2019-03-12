@@ -80,9 +80,9 @@ export const MenuComponent = () => {
       <Separator />
 
       <h2>Menu</h2>
-      <p>The basic stucture of a menu.</p>
+      <p>Menu does not show selection.</p>
       <DocsTile>
-        <Menu>
+        <Menu showSelection={false}>
           <MenuItem key="1">Option 1</MenuItem>
           <MenuItem key="2">Option 2</MenuItem>
           <MenuItem key="3">Option 3</MenuItem>

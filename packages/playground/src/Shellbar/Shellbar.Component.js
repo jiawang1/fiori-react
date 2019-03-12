@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Shellbar1, Menu, MenuItem, Shellbar, Icon, Image } from '@jay.wang/fundamental-react';
+import { Shellbar1, Menu, MenuItem, Shellbar, Icon, Image, Popover, Button } from '@jay.wang/fundamental-react';
 import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../documentation';
 var images = require.context('../../assets', true);
 
@@ -394,6 +394,7 @@ productSwitcher = {
   };
 
   render() {
+    const { ProductComponent } = Shellbar;
     return (
       <div>
         <Header>Shellbar</Header>
@@ -511,6 +512,16 @@ productSwitcher = {
                 <Icon glyph="cart" size="xl" />
               </Shellbar.CompanyLogo>
             }
+            productComponent={
+              <ProductComponent title="Corporate Portal">
+                <Menu showSelection={false}>
+                  <MenuItem key="1">Option 1</MenuItem>
+                  <MenuItem key="2">Option 2</MenuItem>
+                  <MenuItem key="3">Option 3</MenuItem>
+                </Menu>
+              </ProductComponent>
+            }
+            subTitle="SAP sub title"
           />
         </DocsTile>
         <DocsText>{this.shellbarExampleCode}</DocsText>
@@ -528,6 +539,31 @@ productSwitcher = {
                 <Image photo="https://placeimg.com/400/400/nature" />
               </Shellbar.CompanyLogo>
             }
+            productComponent={<ProductComponent title="Corporate Portal" />}
+            userProfileComponent={
+              <Shellbar.UserProfileComponent url="/static/media/headshot-male.10d4e22e.jpg">
+                <Menu showSelection={false}>
+                  <MenuItem key="1">Profile</MenuItem>
+                  <MenuItem key="2">Setting</MenuItem>
+                  <MenuItem key="3">Logout</MenuItem>
+                </Menu>
+              </Shellbar.UserProfileComponent>
+            }
+            actionButtons={[
+              <Shellbar.ActionButton
+                glyph="cart"
+                count={10}
+                onClick={() => {
+                  alert('clicked');
+                }}
+              />,
+              <Shellbar.ActionButton
+                glyph="bell"
+                onClick={() => {
+                  alert('clicked');
+                }}
+              />
+            ]}
           />
         </DocsTile>
         <DocsText>{this.shellbarExampleCode}</DocsText>
