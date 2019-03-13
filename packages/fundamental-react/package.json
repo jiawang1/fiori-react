@@ -1,6 +1,6 @@
 {
   "name": "@jay.wang/fundamental-react",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "private": false,
   "license": "Apache-2.0",
   "homepage": "http://sap.github.io/fundamental-react",
@@ -33,11 +33,11 @@
     "react-syntax-highlighter": "^10.1.2"
   },
   "devDependencies": {
-    "@types/classnames": "^2.2.7",
     "@babel/cli": "^7.1.5",
     "@babel/core": "7.1.0",
     "@babel/polyfill": "^7.1.5",
     "@svgr/webpack": "2.4.1",
+    "@types/classnames": "^2.2.7",
     "@types/jest": "^23.3.13",
     "@types/react": "^16.7.22",
     "@types/react-dom": "^16.0.11",

@@ -1,6 +1,6 @@
 {
   "name": "playground",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "examples for fundamental react",
   "private": true,
   "keywords": [
@@ -34,14 +34,14 @@
     "test:dev": "jest",
     "test": "node scripts/test.js",
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
-    "dev:ts":"node scripts/start.js"
+    "dev:ts": "node scripts/start.js"
   },
   "bugs": {
     "url": "https://github.com/jiawang1/fundamental-react/issues"
   },
   "dependencies": {
     "@babel/core": "7.1.0",
-    "@jay.wang/fundamental-react": "^0.0.4",
+    "@jay.wang/fundamental-react": "^0.0.5",
     "@svgr/webpack": "2.4.1",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "9.0.0",
