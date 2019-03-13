@@ -42,7 +42,7 @@ Fundamental-react does not include the [SAP Fiori Fundamentals library](https://
 
 2. Install Fundamental-react:
 
-`npm install --save fundamental-react`
+`npm install --save @jay.wang/fundamental-react`
 
 [npm package for fundamental-react](https://www.npmjs.com/package/fundamental-react)
 
