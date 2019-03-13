@@ -521,7 +521,7 @@ productSwitcher = {
                 </Menu>
               </ProductComponent>
             }
-            subTitle="SAP sub title"
+            subTitle="sub title"
           />
         </DocsTile>
         <DocsText>{this.shellbarExampleCode}</DocsText>
@@ -575,6 +575,7 @@ productSwitcher = {
         </Description>
         <DocsTile>
           <Shellbar
+            withCopilot
             companyLogoComponent={
               <Shellbar.CompanyLogo url="#">
                 <img src="//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png" alt="SAP" />
