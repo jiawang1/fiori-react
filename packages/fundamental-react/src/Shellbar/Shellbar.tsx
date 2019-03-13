@@ -11,7 +11,7 @@ interface ICompanyLogoProps extends IFunctionalProps {
 }
 const CompanyLogo: FunctionComponent<ICompanyLogoProps> = ({ url, children, className, ...rest }) => {
   const classes = classNames({
-    [`fd-shellbar__logo${ children === undefined? '--image-replaced' : ' '}`]: true,
+    [`fd-shellbar__logo${ children === undefined? '--image-replaced' : ''}`]: true,
     [`${className}`]: typeof className === 'string'
   });
 
@@ -104,6 +104,7 @@ export interface IShellbarProps extends IProps<Shellbar> {
   userProfileComponent: ReactElement<any>;
   actionButtons: Array<ReactElement<any>>
   subTitle?: string;
+  withCopilot ?: boolean
 }
 
 export class Shellbar extends Component<IShellbarProps> {
@@ -116,7 +117,7 @@ export class Shellbar extends Component<IShellbarProps> {
   }
 
   render() {
-    const { companyLogoComponent, productComponent, subTitle, userProfileComponent, actionButtons } = this.props;
+    const { companyLogoComponent, productComponent, subTitle, userProfileComponent, actionButtons,withCopilot = false } = this.props;
     return (
       <div className="fd-shellbar">
         <div className="fd-shellbar__group fd-shellbar__group--start">
@@ -124,7 +125,7 @@ export class Shellbar extends Component<IShellbarProps> {
           {productComponent}
           {subTitle && <div className="fd-shellbar__subtitle">{subTitle}</div>}
         </div>
-        <div className="fd-shellbar__group fd-shellbar__group--middle">middle</div>
+        <div className="fd-shellbar__group fd-shellbar__group--middle">{withCopilot && <img src="//unpkg.com/fiori-fundamentals/dist/images/copilot.png" alt="CoPilot" width="30" height="30"/> }</div>
         <div className="fd-shellbar__group fd-shellbar__group--end">{actionButtons} {userProfileComponent} </div>
       </div>
     );
