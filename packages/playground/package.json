@@ -1,6 +1,6 @@
 {
   "name": "playground",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "examples for fundamental react",
   "private": true,
   "keywords": [
@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "@babel/core": "7.1.0",
-    "@jay.wang/fundamental-react": "^0.0.7",
+    "@jay.wang/fundamental-react": "^0.0.8-beta.0",
     "@svgr/webpack": "2.4.1",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "9.0.0",
