@@ -41,7 +41,11 @@
   },
   "dependencies": {
     "@babel/core": "7.1.0",
+<<<<<<< HEAD
     "@jay.wang/fundamental-react": "^0.0.8-beta.0",
+=======
+    "@jay.wang/fundamental-react": "^0.0.8-alpha.0",
+>>>>>>> Publish
     "@svgr/webpack": "2.4.1",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "9.0.0",

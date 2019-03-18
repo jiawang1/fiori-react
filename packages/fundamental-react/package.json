@@ -1,6 +1,10 @@
 {
   "name": "@jay.wang/fundamental-react",
+<<<<<<< HEAD
   "version": "0.0.8-beta.1.0",
+=======
+  "version": "0.0.8-alpha.0",
+>>>>>>> Publish
   "private": false,
   "license": "Apache-2.0",
   "homepage": "http://sap.github.io/fundamental-react",
