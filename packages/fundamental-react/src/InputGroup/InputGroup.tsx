@@ -1,5 +1,5 @@
 import React, { ChangeEvent, ReactNode,HTMLAttributes, ReactElement } from 'react';
-import classNames from 'classnames'; 
+import classNames from 'classnames';
 import { IFunctionalProps } from '../common/BasicTypes';
 
 export const FormGroup = (props:IFunctionalProps) => {
@@ -61,10 +61,10 @@ const {beforeAddon, afterAddon, compact, prefixIcon, suffixIcon, status, ...rest
       return  <span className={classes}>{child}</span>;
     }
   }
-  return <div className = {frameClass}>
+  return <div className = {frameClass} {...rest as HTMLAttributes<HTMLDivElement>} >
   {beforeAddon && renderAddon(beforeAddon as ReactElement<any>, 'before')}
   {prefixIcon && renderIcon(prefixIcon, 'before')}
-    <input className={inputClass} {...rest as HTMLAttributes<HTMLInputElement>}/>
+    <input className={inputClass} />
   {suffixIcon && renderIcon(suffixIcon, 'after')}
     {afterAddon && renderAddon(afterAddon as ReactElement<any>, 'after')}
   </div>
