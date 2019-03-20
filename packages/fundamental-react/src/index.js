@@ -32,7 +32,6 @@ import { Toggle } from './Toggle/Toggle';
 import Tree from './Tree/Tree';
 import { Time } from './Time/Time';
 import { TimePicker } from './TimePicker/TimePicker';
-import { Shellbar as Shellbar1 } from './Shellbar/Shellbar1';
 import { Shellbar } from './Shellbar';
 import { Radio, CheckBox, CheckGroup } from './Forms';
 
@@ -113,7 +112,6 @@ export {
   ProductTileContent,
   Toggle,
   Tree,
-  Shellbar1,
   Radio,
   CheckBox,
   CheckGroup,
