@@ -37,6 +37,7 @@ import { TreeComponent } from './Tree/Tree.Component';
 import { TimeComponent } from './Time/Time.Component';
 import { TimePickerComponent } from './TimePicker/TimePicker.Component';
 import { ShellbarComponent } from './Shellbar/Shellbar.Component';
+import { TransformComponent } from './TransformWrapper/TransformWrapper.component';
 
 export default class Routes extends Component {
   constructor(props) {
@@ -146,7 +147,8 @@ export default class Routes extends Component {
         },
         { url: '/toggle', name: 'Toggle', component: ToggleComponent },
         { url: '/token', name: 'Token', component: TokenComponent },
-        { url: '/tree', name: 'Tree', component: TreeComponent }
+        { url: '/tree', name: 'Tree', component: TreeComponent },
+        { url: '/transform', name: 'Transform', component: TransformComponent }
       ]
     };
   }
