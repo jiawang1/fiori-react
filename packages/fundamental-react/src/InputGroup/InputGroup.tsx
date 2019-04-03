@@ -36,7 +36,8 @@ const {beforeAddon, afterAddon, compact, prefixIcon, suffixIcon, status, ...rest
   })
 
   const inputClass:string = classNames({
-    'fd-input fd-input--compact': compact,
+    'fd-input':true,
+    'fd-input--compact': compact,
     [`is-${status}`]: status !== undefined
   });
 

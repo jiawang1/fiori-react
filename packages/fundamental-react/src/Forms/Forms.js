@@ -18,12 +18,13 @@ FormItem.propTypes = {
 };
 
 // ------------------------------------------------- Form Label ----------------------------------------------
-export const FormLabel = ({ required, children, className, ...props }) => (
+export const FormLabel = ({ required, children, labelText, className, ...props }) => (
   <label className={`fd-form__label${required ? ' is-required' : ''}${className ? ` ${className}` : ''}`} {...props}>
-    {children}
+    {labelText ? <span>{labelText}</span> : children}
   </label>
 );
 FormLabel.propTypes = {
+  labelText: PropTypes.string,
   className: PropTypes.string,
   required: PropTypes.bool
 };
