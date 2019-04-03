@@ -2,6 +2,9 @@ import React, { ReactEventHandler, FunctionComponent } from 'react';
 import classNames from 'classnames';
 import { IFunctionalProps, TButtonOption, TButtonType } from '../common/BasicTypes';
 
+
+
+
 export interface IButtonProps extends IFunctionalProps {
   type?: TButtonType;
   option?: TButtonOption;
@@ -11,13 +14,13 @@ export interface IButtonProps extends IFunctionalProps {
   isNavbar?: boolean;
   selected?: boolean;
   disabled?: boolean;
-  htmlType?: string;
+  htmlType?: 'submit' | 'reset' | 'button';
   onClick?: ReactEventHandler;
 }
 
 export const Button: FunctionComponent<IButtonProps> = ({
   option,
-  type = 'standard',
+  type,
   isCompact,
   glyph,
   isDropdown,
