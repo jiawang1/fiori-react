@@ -34,6 +34,7 @@ import { Time } from './Time/Time';
 import { TimePicker } from './TimePicker/TimePicker';
 import { Shellbar } from './Shellbar';
 import { Radio, CheckBox, CheckGroup } from './Forms';
+import TransformWrapper from './common/Tramsform';
 
 export {
   ActionBar,
@@ -115,5 +116,6 @@ export {
   Radio,
   CheckBox,
   CheckGroup,
-  Shellbar
+  Shellbar,
+  TransformWrapper
 };
