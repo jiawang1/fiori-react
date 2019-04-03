@@ -107,6 +107,7 @@
     "jest-resolve": "23.6.0",
     "lerna": "^3.8.5",
     "pre-commit": "^1.2.2",
+    "react-hot-loader": "^4.8.0",
     "react-test-renderer": "^16.6.3",
     "standard-version": "^4.4.0"
   },

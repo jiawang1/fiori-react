@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
+import { hot } from 'react-hot-loader';
 import './App.scss';
 import Routes from './Routes';
 import '@babel/polyfill';
 
-class App extends Component {
-  render() {
-    return (
-        <div className='App'>
-            <Routes />
-        </div>
-    );
-  }
-}
+const App = () => (
+  <div className="App" id="app">
+    <Routes />
+  </div>
+);
 
-export default App;
+export default hot(module)(App);
