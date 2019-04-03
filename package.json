@@ -10,16 +10,17 @@
   "scripts": {
     "boot": "npm install lerna && lerna bootstrap --hoist --nohoist=fiori-fundamentals",
     "deploy": "lerna publish ",
-    "dev":"lerna run dev:ts --parallel",
-    "start":"lerna run dev:ts --parallel"
+    "dev": "lerna run dev:ts --parallel",
+    "start": "lerna run dev:ts --parallel"
   },
   "devDependencies": {
-    "lerna": "^3.11.0"
+    "lerna": "^3.13.1"
   },
   "dependencies": {
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.6.0",
     "eslint-plugin-prettier": "^3.0.1",
-    "prettier": "^1.16.1"
+    "prettier": "^1.16.1",
+    "react-hot-loader": "^4.8.0"
   }
 }

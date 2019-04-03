@@ -1,4 +1,4 @@
-'use strict'; 
+'use strict';
 
 const fs = require('fs');
 const path = require('path');
@@ -211,24 +211,26 @@ module.exports = {
             include: paths.appSrc,
             loader: require.resolve('babel-loader'),
             options: {
-              customize: require.resolve('babel-preset-react-app/webpack-overrides'),
+              // customize: require.resolve('babel-preset-react-app/webpack-overrides'),
 
-              plugins: [
-                [
-                  require.resolve('babel-plugin-named-asset-import'),
-                  {
-                    loaderMap: {
-                      svg: {
-                        ReactComponent: '@svgr/webpack?-prettier,-svgo![path]'
-                      }
-                    }
-                  }
-                ]
-              ],
+              // plugins: [
+              //   [
+              //     require.resolve('babel-plugin-named-asset-import'),
+              //     {
+              //       loaderMap: {
+              //         svg: {
+              //           ReactComponent: '@svgr/webpack?-prettier,-svgo![path]'
+              //         }
+              //       }
+              //     }
+              //   ]
+              // ],
               // This is a feature of `babel-loader` for webpack (not Babel itself).
               // It enables caching results in ./node_modules/.cache/babel-loader/
               // directory for faster rebuilds.
               cacheDirectory: true,
+
+              plugins: ['react-hot-loader/babel'],
               // Don't waste time on Gzipping the cache
               cacheCompression: false
             }
