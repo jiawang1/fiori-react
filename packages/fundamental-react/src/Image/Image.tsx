@@ -9,10 +9,8 @@ export interface IImageProps extends IFunctionalProps {
 
 export type tImageType = 'circle' | '';
 
-export const Image: FunctionComponent<IImageProps> = ({ size = 'm', type, photo, className, style, ...props }) => {
-  const imageStyle = Object.assign({}, style ? style : {}, { backgroundImage: `url(${photo})` });
+export const Image: FunctionComponent<IImageProps> = ({ size = 'm', type, photo, className, style = {}, ...props }) => {
+  const imageStyle = Object.assign({}, style, { backgroundImage: `url(${photo})` });
 
-  return (
-    <span className={`${`fd-image--${size}`}${type ? ` fd-image--${type}` : ''}${className ? ` ${className}` : ''}`} style={imageStyle} {...props} />
-  );
+  return <span className={`${`fd-image--${size}`}${type ? ` fd-image--${type}` : ''}${className ? ` ${className}` : ''}`} style={imageStyle} {...props} />;
 };
