@@ -88,13 +88,7 @@
     "/dist/**",
     "/es/**"
   ],
-  "pre-commit": {
-    "colors": true,
-    "run": [
-      "lint:pre-commit"
-    ],
-    "silent": false
-  },
+
   "browserslist": [
     ">0.2%",
     "not dead",
